@@ -1,0 +1,93 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>input[type=text] {width:200px;}textarea{width: 200px;height:83px;}body{background-color:#ccffcc}</style>
+<center>
+Note: Generating link will not be supported if hosting doesn't supports php.<br>
+<br>
+
+
+
+<input type="text" id="link" placeholder="Link To Unblock"><br><br><input type="text" id="image" placeholder="http://example.com/Image.PNG"><br>
+<input type="text" id="title" placeholder="Title To Display"><br><input type="text" id="description" placeholder="Description To Display">
+<input placeholder="File Name to generate" style="width:200px;display:block;" type="text" id="name">
+<h4>What to Generate ?</h4>
+<center>file &nbsp &nbsp &nbsp &nbsp code &nbsp &nbsp &nbsp &nbsp link</center> 
+<input style="width:150px;" oninput="ShowName()" type="range" min="1" max="3" id="method"><br>
+<button onclick="generate()" style="background-color:black;color:white;width:200px;height:35px;">Generate</button><br><br>
+<textarea spellcheck="false" style="display:none;" id="code1"></textarea>
+<a style="display:none;" id="code2" href="data:text/plain;charset=UTF-8,Hello World!" download="LinkUnblocker.php">Download File</a><br><br>
+Uploading this file or pasting code anywhere will direct Visitors to Blocked Link But not Crawlers<br>
+<script>
+
+function method()
+{
+var method = {bools:''};
+Object.defineProperty(method, 'bools', {value: document.getElementById("method").value,writable: false});
+return method.bools;
+}
+
+ function toHex(str) {
+    var result = '';
+    for (var i=0; i<str.length; i++) {
+      result += str.charCodeAt(i).toString(16);
+    }
+    return result;
+  }
+  
+  
+function generate(){
+var code = '<?php $b = explode(" ","http:// https:// + .com twitterbot facebookexternalhit googlebot tumblr linkedinbot snapchat slurp yahoo microsoft bingbot framework bot");$h =  explode(" ","apple firefox windows android linux chrome safari gecko iphone macintosh mac khtml browser nokia opera mozilla mobile network blackberry cpu outlook pc");$u = strtolower($_SERVER[\'HTTP_USER_AGENT\']);if (strlen($u) > 30){if ((substr_count($b[0], $u) + substr_count($b[1], $u) + substr_count($b[2], $u) + substr_count($b[3], $u) + substr_count($b[4], $u) + substr_count($b[5], $u) + substr_count($b[6], $u) + substr_count($b[7], $u) + substr_count($b[8], $u) + substr_count($b[9], $u) + substr_count($b[10], $u) + substr_count($b[11], $u) + substr_count($b[12], $u) + substr_count($b[13], $u) + substr_count($b[14], $u) + substr_count($b[15], $u)) <= \'0\'){if ((substr_count($h[0], $u) + substr_count($h[1], $u) + substr_count($h[2], $u) + substr_count($h[3], $u) + substr_count($h[4], $u) + substr_count($h[5], $u) + substr_count($h[6], $u) + substr_count($h[7], $u) + substr_count($h[8], $u) + substr_count($h[9], $u) + substr_count($h[10], $u) + substr_count($h[11], $u) + substr_count($h[12], $u) + substr_count($h[13], $u) + substr_count($h[14], $u) + substr_count($h[15], $u) + substr_count($h[16], $u) + substr_count($h[17], $u) + substr_count($h[18], $u) + substr_count($h[19], $u) + substr_count($h[20], $u) + substr_count($h[21], $u)) <= \'1\'){echo "<script>window.location.replace(\'' 
++ document.getElementById("link").value 
++ '\');<\/script>\";}}}echo \'<head><meta property=\"og:title" content=\"' 
++ document.getElementById("title").value 
++ '"/><meta property="og:description" content="' 
++ document.getElementById("description").value + '"/><meta property="og:image" content="' + document.getElementById("image").value + '"/><meta property="og:type" content="website" /></head>\';?>';
+if(method() == 1)
+{
+document.getElementById("code2").style.display = "block";
+document.getElementById("code2").href="data:text/plain;charset=UTF-8," + code;
+document.getElementById("code1").style.display = "none";
+}
+else if (method() == 2)
+{
+document.getElementById("code1").style.display = "block";
+document.getElementById("code1").value = code;
+document.getElementById("code2").style.display = "none";
+}
+else if (method() == 3)
+{
+var xhttp = new XMLHttpRequest(); 
+
+
+if (window.XMLHttpRequest) {
+   xmlhttp = new XMLHttpRequest();
+ } else {
+   xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+} 
+xhttp.open("POST", "post.php", true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("code=" + toHex(code) + "&name=" + toHex(document.getElementById("name").value + ".php")); 
+
+
+var iframe = document.getElementById('frame');
+iframe.src = iframe.src;
+
+
+}
+}
+
+
+  
+  
+function ShowName() {
+if(method() == 2) {
+document.getElementById("name").style.display = "none";
+}
+else {
+document.getElementById("name").style.display = "block";
+}}
+</script>
+<iframe id="frame" style="width:700px;height:300px;" src="./links.php"></iframe><br><br>
+<b>Coded by <a href="http://github.com/graysuit">Graysuit</a><br>
+Meet him <a href="http://FB.com/gray.programmerz.5">Fb.com/gray.programmerz.5</a><br>
+Email at <a href="mailto:hackrefisher@gmail.com">hackrefisher@gmail.com</a></b>
+</center>
