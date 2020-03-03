@@ -60,12 +60,13 @@ if (window.XMLHttpRequest) {xmlhttp = new XMLHttpRequest(); } else {xmlhttp = ne
 xhttp.open("POST", "post.php", true);
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send("code=" + toHex(code) + "&name=" + toHex(document.getElementById("name").value + ".php")); 
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    location.reload(); 
+  }
+};
 }
-}
-
-
-  
-  
+}  
 function ShowName() {
 if(method() == 2) {
 document.getElementById("name").style.display = "none";
