@@ -56,22 +56,11 @@ document.getElementById("code2").style.display = "none";
 else if (method() == 3)
 {
 var xhttp = new XMLHttpRequest(); 
-
-
-if (window.XMLHttpRequest) {
-   xmlhttp = new XMLHttpRequest();
- } else {
-   xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-} 
+if (window.XMLHttpRequest) {xmlhttp = new XMLHttpRequest(); } else {xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");} 
 xhttp.open("POST", "post.php", true);
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send("code=" + toHex(code) + "&name=" + toHex(document.getElementById("name").value + ".php")); 
-
-
-var iframe = document.getElementById('frame');
-iframe.src = iframe.src;
-
-
+location.reload(); 
 }
 }
 
