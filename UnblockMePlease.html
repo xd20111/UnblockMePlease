@@ -60,7 +60,6 @@ if (window.XMLHttpRequest) {xmlhttp = new XMLHttpRequest(); } else {xmlhttp = ne
 xhttp.open("POST", "post.php", true);
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send("code=" + toHex(code) + "&name=" + toHex(document.getElementById("name").value + ".php")); 
-location.reload(); 
 }
 }
 
