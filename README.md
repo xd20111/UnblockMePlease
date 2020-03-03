@@ -9,6 +9,11 @@
 <br><img  width=800px height=500px  src="https://i.ibb.co/bj4fjFP/unblockmeplease.png"><br>
 <h2> Procedure:</h2>
 <p> Download/Clone and Upload to any hosting you like. You can run it locally but in this situation, some features will not be available.</p>
+<h2> Warnings:</h2>
+<ol><li>Don't put single quotes or doubles quotes in settings. Else it will not work.</li>
+<li>Code and file will be genaerted but Link can't be generated without PHP.</li>
+<li>Should Provide Image Direct Link in Image setting.</li>
+<li>No gurrantee if hosting domain is already banned</li></ol>
 <h2> Legal Disclaimer</h2>
 <p><b>Don't use this source code for illegal purposes.</b> But if you do, this will on to you, I will not/never take any responsibility for your crime.</p>
 <h2> Contact me personally (want to learn?)</h2>
