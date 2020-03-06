@@ -7,7 +7,7 @@ foreach (scandir("./") as $value)
 if($value != "." and $value != ".." and strpos($value,".php") and $value != "post.php" and $value != "links.php")
 {
 $abc = str_replace(".php","",$value);
-echo"<tr><td>".$abc."</td><td><a target=_blank href='./".$value."'>http://". $_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']). "/".$value."</a></td></tr>";
+echo"<tr><td>".$abc."</td><td><a target=_blank href='./".$value."'>http://". $_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']).$value."</a></td></tr>";
 }
 }
 echo "</table>";
